@@ -22,12 +22,13 @@
 #### for Frontend:
 > HTML
 > CSS
-> AngularJs
+> TypeScript
+> Angular
 
 #### for Backend:
+> Java
 > SpringBoot
-> MySql
-> JavaScript
+> MySQL
 
 
 # **Thanks for reading ...**
