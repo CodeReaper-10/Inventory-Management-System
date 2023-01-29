@@ -1,7 +1,7 @@
 # Inventory-Management-System
 
 # How to use :-
-### npm packages needs to install
+### JDK17+ and Node.js (LTS version) need to be installed
 *install angular/cli*
 -
 - open terminal/command prompt and type following command:
