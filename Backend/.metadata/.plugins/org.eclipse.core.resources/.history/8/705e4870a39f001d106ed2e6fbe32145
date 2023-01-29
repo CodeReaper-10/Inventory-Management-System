@@ -1,0 +1,46 @@
+package com.mlh.hackcommerce.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mlh.hackcommerce.entity.Products;
+import com.mlh.hackcommerce.repository.ProductsRepository;
+
+@Service
+public class ProductsService {
+	
+	@Autowired
+	private ProductsRepository productsRepo;
+	
+	public Products addProduct(Products product) {
+		return productsRepo.save(product);
+	}
+	
+	public Products getProductById(Long id) {
+		return productsRepo.findById(id).get();
+	}
+	
+//	public List<Products> getProductByName(String name) {
+//		return productsRepo.findByName(name).get();
+//	}
+	
+	public List<Products> getAllProducts() {
+		return productsRepo.findAll();
+	}
+	
+	public Products updateProduct(Products product) {
+		return productsRepo.save(product);
+	}
+	
+	public String deleteProduct(Long id) {
+		if(productsRepo.existsById(id)) {
+			productsRepo.deleteById(id);
+			return "Item has been removed successfully!";
+		}
+		else {
+			return "No such item found!";
+		}
+	}
+}

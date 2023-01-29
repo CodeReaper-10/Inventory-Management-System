@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg ms-5 me-5">
+    <div class="container-fluid">
+      <span class="navbar-brand nav-text-col font-2">Inventory Database</span>
+        <div class="navbar-nav">
+          <a class="nav-link text-dark" href="index.html">Dashboard</a>
+          <a class="nav-link text-dark" href="#">Add Items</a>
+      </div>
+    </div>
+  </nav>
+<span id="hr-line"></span>
+
+<div class="container text-center mt-5">
+  <div class="col border-1 border border-color rounded-5">
+      <span class="font-2">Available Stocks</span>
+      <table class="table border-0 mt-2">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Qty ( in stock )</th>
+              <th scope="col">Unit Price</th>
+              <th scope="col">Stock Value</th>
+              <th scope="col">Modify/Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of allProducts">
+              <th scope="row">{{product.itemName}}</th>
+              <td>{{product.unitsAvailable}}</td>
+              <td>{{product.pricePerUnit | currency:'USD'}}</td>
+              <td>{{product.unitsAvailable * product.pricePerUnit | currency:'USD'}}</td>
+              <td><button type="button" class="btn btn-outline-success" (click)="onModify(product.id)">Modify</button>
+                  <button type="button" class="btn btn-outline-danger ms-2" (click)="onDelete(product.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+  </div>
+</div>

@@ -1,0 +1,5 @@
+package com.mlh.hackcommerce.controller;
+
+public class ProductsController {
+
+}

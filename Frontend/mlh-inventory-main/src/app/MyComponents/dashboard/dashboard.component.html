@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg  ms-5 me-5">
+    <div class="container-fluid">
+      <span class="navbar-brand nav-text-col font-2">Inventory Database</span>
+        <div class="navbar-nav">
+          <a class="nav-link text-dark" [routerLink]="'/addItems'">Add Item</a>
+          <a class="nav-link text-dark" [routerLink]="'/modifyItems'">Modify Items</a>
+        </div>
+      </div>
+    </nav>
+    <span id="hr-line"></span>
+
+    <div class="container text-center mt-4">
+        <div class="row">
+          <div class="col border border-2 border-color me-2 rounded-4">
+            <span id="items">Items Available</span>
+            <ul class="item-size" *ngFor="let product of allProducts">
+                <li id="item">{{product.itemName}}</li>
+            </ul>
+
+          </div>
+          <div class="col border border-2 border-color me-2 rounded-4">
+            <span class="disp-block font-2">Warehouse</span>
+            <div class="card mt-2">
+                <div class="card-body">
+                    Available Items : <span>{{totalStockAvailable}}</span>
+                </div>
+                <div class="card-body">
+                    Available Stock Price : <span>{{totalStockValue | currency:'USD'}}</span>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    Total Items Sold : <span>54</span>
+                </div>
+                <div class="card-body">
+                    Total Revenue : <span>$8355.65</span>
+                </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+
+    <div class="container text-center mt-5">
+        <div class="col border-1 border border-color rounded-5">
+            <span class="font-2">Stocks</span>
+            <table class="table border-0 mt-2">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Qty ( in stock )</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Stock Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of allProducts">
+                    <th scope="row">{{product.itemName}}</th>
+                    <td>{{product.unitsAvailable}}</td>
+                    <td>{{product.pricePerUnit | currency:'USD'}}</td>
+                    <td>{{product.unitsAvailable * product.pricePerUnit | currency:'USD'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+    </div>

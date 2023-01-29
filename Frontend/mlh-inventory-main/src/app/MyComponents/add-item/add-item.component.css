@@ -1,0 +1,12 @@
+.help-block {
+    color: brown;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  
+.req:after {
+    content:" *";
+    color: red;
+  }

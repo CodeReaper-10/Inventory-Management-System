@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg ms-5 me-5">
+  <div class="container-fluid">
+    <span class="navbar-brand nav-text-col font-2">Inventory Database</span>
+      <div class="navbar-nav">
+        <a class="nav-link text-dark" [routerLink]="'/home'">Dashboard</a>
+        <a class="nav-link text-dark" [routerLink]="'/modifyItems'">Modify Items</a>
+    </div>
+  </div>
+</nav>
+<span id="hr-line"></span>
+
+<form class="card-body cardbody-color p-lg-5" (ngSubmit)="onAddItem(addItem)" #addItem="ngForm">
+
+    <div class="form-outline mb-4">
+        <label class="form-label req" for="itemId">Item ID</label>
+      <input type="number" id="itemId" class="form-control form-control-lg" ngModel name="itemId" required #itemId="ngModel" />
+      <span class="help-block" *ngIf="!itemId.valid && itemId.touched">Please enter a valid Item ID.</span>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label req" for="iname">Item Name</label>
+      <input type="text" id="iname" class="form-control form-control-lg" ngModel name="iname" required #iname="ngModel" />
+      <span class="help-block" *ngIf="!iname.valid && iname.touched">Please enter a valid Item Name.</span>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="desc">Description</label>
+      <input type="text" id="desc" class="form-control form-control-lg" ngModel name="desc" #desc="ngModel" />
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label req" for="price">Price per Unit</label>
+      <input type="number" id="price" class="form-control form-control-lg" ngModel name="price" required #price="ngModel" />
+      <span class="help-block" *ngIf="!price.valid && price.touched" >Please enter a valid Price.</span>
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label req" for="units">Total units</label>
+    <input type="number" id="units" class="form-control form-control-lg" ngModel name="units" required #units="ngModel" />
+    <span class="help-block" *ngIf="!units.valid && units.touched">Please enter valid stock.</span>
+  </div>
+
+    <button type="submit" class="btn btn-primary text-right" [disabled]="!addItem.valid">Add Item</button>
+  </form>

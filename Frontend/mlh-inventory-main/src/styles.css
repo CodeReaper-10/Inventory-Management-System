@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(255, 246, 200);
+}
+
+#items{
+    font-size: 2vw;
+}
+
+#hr-line{
+    display:block;
+    margin: auto;
+    width:95%;
+    border-top: 2px solid rgb(18, 166, 230)
+}
+
+.font-2{
+    font-size: 2vw;
+}
+
+.item-size{
+    font-size: 1.5vw;
+}
+
+.border-color{
+    border-color: rgb(15, 15, 189);
+}
+
+.nav-text-col{
+    color: rgb(156, 255, 7);
+}
+
+.disp-block{
+    display: block;
+}
+
+thead{
+    color: rgb(61, 13, 163);
+}
