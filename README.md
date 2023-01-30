@@ -10,12 +10,13 @@
 
 *install bootstrap*
 -
-- naviagate to inventory-system directory, and,
+- naviagate to mlh-inventory-main directory, and,
 > npm install -g @angular/cli
 
 
-## To Run:-
-- naviagate to inventory-system directory, open terminal there and run
+## Steps To Run:-
+- Run the backend as a Spring Boot app
+- For frontend, naviagate to mlh-inventory-main directory, open terminal there and run
 > npm install
 - then run
 > ng serve
@@ -31,7 +32,3 @@
 > Java
 > SpringBoot
 > MySQL
-
-
-# **Thanks for reading ...**
-
