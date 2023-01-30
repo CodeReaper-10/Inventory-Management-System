@@ -15,7 +15,9 @@
 
 
 ## To Run:-
-- naviagate to inventory-system directory, open terminal there and type
+- naviagate to inventory-system directory, open terminal there and run
+> npm install
+- then run
 > ng serve
 
 ## Technologies used:-
